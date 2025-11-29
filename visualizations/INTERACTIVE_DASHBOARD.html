@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa Fiscal Efficiency - Interactive Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+
+        .insight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .insight-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .insight-box p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .stat-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .chart-container {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        .chart-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .chart-description {
+            color: #7f8c8d;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+
+        .cta-box {
+            background: #f0f8ff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .cta-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Africa Fiscal Efficiency Dashboard</h1>
+            <p class="subtitle"><strong>10Alytics Global Hackathon 2025</strong> | Interactive Analysis of 14 African Countries (2010-2025)</p>
+        </div>
+
+        <div class="insight-box">
+            <h2>💡 Key Finding: The Efficiency Gap</h2>
+            <p>
+                Better tax collection does <strong>NOT</strong> guarantee economic growth. 
+                Ethiopia (<span class="stat-highlight">12.8% tax-to-GDP</span>) achieves 
+                <span class="stat-highlight">7.7% growth</span> while Egypt 
+                (<span class="stat-highlight">15.2% tax-to-GDP</span>) achieves only 
+                <span class="stat-highlight">3.6% growth</span>.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Why?</strong> Ethiopia invests in infrastructure (11.6× better ROI), 
+                while Egypt spends on debt servicing.
+            </p>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="chart-title">📊 Chart 1: The Efficiency Gap (Interactive)</h2>
+            <p class="chart-description">
+                💡 <strong>How to interact:</strong> Hover over points to see details | 
+                Click legend to filter countries | Drag to zoom | Double-click to reset
+            </p>
+            <iframe src="01_efficiency_gap_INTERACTIVE.html"></iframe>
+        </div>
+
+        <div class="cta-box">
+            <h3>🔍 What This Chart Shows:</h3>
+            <p>
+                The scatter plot reveals a <strong>weak negative correlation (-0.156)</strong> 
+                between tax efficiency and growth. Countries in the <strong style="color: #e74c3c;">red quadrant</strong> 
+                (high tax, low growth) demonstrate the "Efficiency Gap" - they collect taxes well 
+                but fail to convert it into economic expansion.
+            </p>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="chart-title">📈 Chart 2: COVID-19 Impact & Recovery (2015-2023)</h2>
+            <p class="chart-description">
+                💡 <strong>How to interact:</strong> Press ▶ Play to animate time series | 
+                Use slider to jump to specific years | Hover for exact values | Red zone = COVID shock
+            </p>
+            <iframe src="03_covid_impact_INTERACTIVE.html"></iframe>
+        </div>
+
+        <div class="cta-box">
+            <h3>🔍 What This Chart Shows:</h3>
+            <p>
+                The 2020 COVID-19 pandemic (red zone) caused a sharp GDP growth decline across all countries. 
+                However, <strong style="color: #2ecc71;">Ethiopia and Rwanda</strong> recovered faster and stronger, 
+                returning to 7%+ growth by 2024. In contrast, <strong style="color: #e74c3c;">Egypt and South Africa</strong> 
+                showed sluggish recovery, proving that infrastructure resilience matters during crises.
+            </p>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="chart-title">⚔️ Chart 3: Ethiopia vs Egypt Case Study</h2>
+            <p class="chart-description">
+                💡 <strong>How to interact:</strong> Click country names in legend to hide/show | 
+                Hover over bars for exact values | Compare side-by-side across 6 key metrics
+            </p>
+            <iframe src="04_ethiopia_vs_egypt_INTERACTIVE.html"></iframe>
+        </div>
+
+        <div class="cta-box">
+            <h3>🔍 What This Chart Shows:</h3>
+            <p>
+                Despite similar tax collection efficiency (~13-15%), <strong style="color: #2ecc71;">Ethiopia</strong> 
+                achieves <strong>2.4× the GDP growth</strong> of <strong style="color: #e74c3c;">Egypt</strong>. 
+                The key difference? Ethiopia allocates <strong>28% of its budget to capital expenditure</strong> 
+                (infrastructure), while Egypt spends <strong>only 22%</strong>, diverting the rest to debt servicing.
+            </p>
+        </div>
+
+        <div class="insight-box">
+            <h2>🎯 Policy Recommendations</h2>
+            <ol style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
+                <li><strong>Rebalance Budgets:</strong> Allocate 25-30% of expenditure to infrastructure (Ethiopia model)</li>
+                <li><strong>Prioritize ROI:</strong> Mandate minimum 0.10 ROI for all capital projects</li>
+                <li><strong>Restructure Debt:</strong> Negotiate longer repayment terms to free fiscal space</li>
+                <li><strong>Regional Cooperation:</strong> Pool resources for high-ROI cross-border projects</li>
+                <li><strong>Transparency Frameworks:</strong> Track GDP impact per infrastructure project in real-time</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p><strong>Data Source:</strong> World Bank Fiscal Data (2010-2025) | 14 African Countries | 28 Indicators</p>
+            <p style="margin-top: 10px;"><strong>Analysis:</strong> 10Alytics Global Hackathon 2025 Submission</p>
+            <p style="margin-top: 10px; font-style: italic;">
+                "Africa doesn't need better tax collectors. It needs better builders.
+,
+,
+margin-top: 20px;">
+                <strong>Explore More:</strong> 
+                <a href="../presentation/10Alytics_Governance_Growth_Gap.pptx" style="color: #3498db;">Full Presentation</a> | 
+                <a href="../notebooks/" style="color: #3498db;">Jupyter Notebooks</a> | 
+                <a href="../docs/SUBMISSION_PACKAGE.md" style="color: #3498db;">Technical Documentation</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
