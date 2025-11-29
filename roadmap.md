@@ -39,10 +39,10 @@
         - *Time Series:* Use interpolation (e.g., `df.interpolate()`) if data is missing in a sequence of years.
         - *Cross-Sectional:* Use Median imputation for skewed economic data.
         - *Document it:* Note exactly *why* you chose a method (Judges love this transparency).
-- [ ] **Data Transformation (Critical):**
+- ✅ **Data Transformation (Critical):**
     - **Pivot from Long to Wide:** Transform data so each row = Country-Year, columns = indicators.
         - *Target:* Rows: `2010-Nigeria`, `2011-Nigeria`... Columns: `Health Expenditure`, `GDP Growth`, etc.
-- [ ] **Feature Engineering:**
+- ✅ **Feature Engineering:**
     - Create "Per Capita" metrics (e.g., `Health Expenditure / Population`).
     - Create "Growth Rates" (Year-over-Year change in GDP/Inflation).
     - Create "Ratios" (e.g., `Debt-to-GDP`, `Tax-to-GDP`, `Tax-to-Revenue`).

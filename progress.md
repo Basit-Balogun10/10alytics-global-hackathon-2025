@@ -149,6 +149,67 @@
    - **623 Country-Year observations** ready for analysis
    - **14 countries** × ~45 years average coverage
 
+---
+
+## 🔧 Phase 2.5: Feature Engineering (30% - 40%)
+**Date:** November 29, 2025  
+**Status:** ✅ Complete
+
+**What We Did:**
+
+1. **✅ Created Per Capita Metrics (5 features):**
+   - `Health_Expenditure_Per_Capita` - SDG 3 (Health)
+   - `Education_Expenditure_Per_Capita` - SDG 4 (Education)
+   - `Capital_Expenditure_Per_Capita` - SDG 9 (Infrastructure)
+   - `Revenue_Per_Capita` - Economic capacity indicator
+   - `Tax_Revenue_Per_Capita` - SDG 8 (Economic Growth)
+   - **Rationale:** Enables fair country comparisons (Nigeria vs Rwanda)
+
+2. **✅ Created Economic Ratios (7 features):**
+   - `Debt_to_GDP_Ratio` - SDG 9 (Infrastructure sustainability)
+   - `Tax_to_GDP_Ratio` - SDG 16 (Governance efficiency) **KEY METRIC**
+   - `Health_Spending_to_GDP` - SDG 3 (Health investment)
+   - `Education_Spending_to_GDP` - SDG 4 (Education investment)
+   - `Budget_Balance_to_GDP` - Fiscal health indicator
+   - `Trade_Balance` - Export competitiveness
+   - `Trade_Openness` - Economic integration
+   - **Rationale:** These ratios reveal spending efficiency and governance quality
+
+3. **✅ Created Growth Rate Metrics (6 features):**
+   - `Revenue_Growth_Rate` - Revenue mobilization trends
+   - `Tax_Revenue_Growth_Rate` - Tax efficiency trends
+   - `Health_Expenditure_Growth_Rate` - Health investment commitment
+   - `Population_Growth_Rate` - Demographic pressure
+   - `Debt_Growth_Rate` - Debt accumulation speed
+   - Existing: `GDP Growth Rate` (already in dataset)
+   - **Rationale:** Growth rates reveal trends and momentum (critical for narrative)
+
+4. **✅ Created Composite Indicators (5 features):**
+   - `Fiscal_Capacity_Index` - Tax Revenue / Total Revenue (governance quality)
+   - `Social_Spending_Ratio` - (Health + Education) / Total Expenditure
+   - `Infrastructure_Investment_Ratio` - Capital Expenditure / GDP
+   - `Export_Intensity` - Exports / GDP (economic diversification)
+   - `Inflation_Volatility` - 3-year rolling std (economic stability)
+   - **Rationale:** Composite metrics capture complex relationships for "Efficiency Gap" narrative
+
+5. **✅ Quality Checks:**
+   - Checked for infinite values from division operations → None found
+   - Validated all new features against original data
+   - Confirmed data types and ranges are reasonable
+
+6. **✅ Saved Enhanced Dataset:**
+   - Output: `data/processed/fiscal_data_enhanced.csv`
+   - **Final shape:** 623 rows × 50 columns
+   - **Original features:** 28
+   - **Engineered features:** 22
+   - **All features mapped to SDGs** for narrative alignment
+
+**Key Insights:**
+- Created **22 engineered features** aligned with our 5 target SDGs
+- Features specifically designed to test "Governance-Growth Gap" hypothesis
+- Ready for correlation analysis (INPUTS vs OUTCOMES)
+- Next: Download external outcome data (Mortality, Literacy, Corruption Index)
+
 **Key Insights:**
 - Data spans **66 years** (1960-2025) - much longer than expected!
 - Most complete data is from 2000-2023 (modern era)
