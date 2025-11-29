@@ -40,6 +40,7 @@
 - 16 slides with narrative arc
 - 6 embedded visualizations
 - Policy recommendations
+- **Google Drive Link:** https://drive.google.com/file/d/1lhvmFr-v9KLngbqpYUu3as_HXbGbfULp/view?usp=drivesdk
 
 📂 `presentation/SLIDE_COMMENTARY.md` ⭐ **JUDGES: READ THIS!**
 - Slide-by-slide context and methodology
@@ -55,11 +56,12 @@
 5. `05_visualization_dashboard.ipynb` - Generate static PNG charts
 6. `06_interactive_visualizations.ipynb` - Generate interactive HTML charts
 
-### **4. README for Judges** ⭐
-📂 `README_FOR_JUDGES.md`
-- **Extract ZIP first before viewing**
+### **4. Submission Guide** ⭐
+📂 `SUBMISSION_GUIDE_FOR_JUDGES.txt`
+- **Extract ZIP first!** Instructions for proper viewing
 - Quick start guide (3 steps)
-- Complete file inventory
+- Complete file inventory with locations
+- Alternative access (Google Drive + GitHub)
 - Critical note on analysis scope (14 countries, not just Egypt/Ethiopia)
 
 ### **5. Key Documentation**

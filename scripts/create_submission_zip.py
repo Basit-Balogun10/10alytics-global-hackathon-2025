@@ -18,12 +18,15 @@ EXCLUDE_PATTERNS = [
     'BRANCHING_STRATEGY.md',
     'GOOGLE_DRIVE_BACKUP.md',
     'SUBMISSION_PREP.md',
+    'artifacts',
+    'scripts',
+    '.zip',
 ]
 
 # Files/folders to include
 INCLUDE_PATTERNS = [
     'README.md',
-    'README_FOR_JUDGES.md',
+    'SUBMISSION_GUIDE_FOR_JUDGES.txt',
     'notebooks/',
     'data/',
     'visualizations/',
@@ -44,7 +47,7 @@ def should_exclude(path_str):
 def should_include(rel_path):
     """Check if path should be included"""
     # Root level files
-    if rel_path in ['README.md', 'README_FOR_JUDGES.md']:
+    if rel_path in ['README.md', 'SUBMISSION_GUIDE_FOR_JUDGES.txt']:
         return True
     
     # Check directories - normalize paths
@@ -60,7 +63,7 @@ def should_include(rel_path):
 
 # Base directory
 base_dir = Path(r'C:\Users\USER\Documents\10Alatytics-2025')
-output_zip = Path(r'C:\Users\USER\Documents\10Alatytics-2025\10Alytics_Basit_Balogun_Working_Files_Submission.zip')
+output_zip = Path(r'C:\Users\USER\Documents\10Alatytics-2025\artifacts\10Alytics_Basit_Balogun_Working_Files_Submission.zip')
 
 print(f"Creating submission ZIP: {output_zip}")
 print(f"Source directory: {base_dir}\n")
